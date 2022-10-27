@@ -1,0 +1,130 @@
+{% with messages = get_flashed_messages()  %}
+{% if messages %}
+ {% for message in messages %}
+        <p>{{ message }}</p>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      {% endfor %}
+      {% endif %}
+      {% endwith %}
+      <div class="card card-body">
+        <form action="{{url_for('agregar')}}" method="POST">
+          <div class="form-group">
+		<form action="/agregar" method="POST" class="formulario" id="formulario">
+
+			<div class="form-group">
+                <input type="text" class="form-control" name="nombre" placeholder="Nombre">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" name="apellido" placeholder="apellido">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" name="rut" placeholder="rut">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" name="telefono" placeholder="telefono">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" name="direccion" placeholder="direccion">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" name="ciudad" placeholder="ciudad">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" name="email" placeholder="email">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" name="fecha" placeholder="fecha: dd-mm-aaaa">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" name="ecivil" placeholder="estado civil">
+              </div>
+              <input type="text" class="form-control" name="comentarios" placeholder="comentarios">
+
+
+
+
+
+
+
+              <button class="btn btn-primary btn-block">
+                Guardar
+              </button>
+			
+
+			
+				    
+
+			
+		</form>
+
+
+		<!-- filtro -->
+
+        <td>
+
+            <div class="" id="">
+                <label for="filtro" class="formulario__label">Buscar</label>
+                <div class="formulario__grupo-input">
+                    <input type="text" onkeyup="myFunction()" class="formulario__input" name="filtro" id="filtro"
+                        placeholder="buscar por apellido">
+                    
+                </div>
+              
+            </div>
+
+
+        </td>
+
+        <!-- tabla -->
+
+        <table id="listado" class='hide'>
+
+
+
+            <tr>
+
+                <th>Nombre</th>
+                <th>Apellidos</th>
+                <th>Rut</th>
+                <th>Telefono</th>
+                <th>Direccion</th>
+                <th>Ciudad</th>
+                <th>Email</th>
+                <th>Fecha nacimiento</th>
+                <th>Estado civil</th>
+				<th>comentarios</th>
+
+
+
+
+
+            </tr>
+
+
+
+        </table>
+
+
+
+
+
+
+	</main>
+
+
+
+
+
+
+
+
+
+    <script src="./js/formulario.js"></script>
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
